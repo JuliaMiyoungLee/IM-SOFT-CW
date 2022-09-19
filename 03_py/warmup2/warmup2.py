@@ -43,19 +43,6 @@ def array_front9(nums):
       return True
   return False
 
-OR!!!!
-
-def array_front9(nums):
-  counter = 0
-  for i in nums:
-    counter += 1
-    if(counter != 5):
-      if(i == 9):
-        return True
-    if(counter >=5):
-      return False
-  return False
-
 def array123(nums):
   for i in range(len(nums)-2):
     if(nums[i] == 1 and nums[i+1] == 2 and nums[i+2] == 3):
