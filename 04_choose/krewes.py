@@ -28,7 +28,6 @@ def choose():
     keyindex = int(random.random()*len(list(krewes.keys())))
     key = list(krewes.keys())[keyindex]
     valindex = int(random.random()*len(krewes[key]))
-    return krewes[key][valindex]
+    print(f'{list(krewes.keys())[keyindex]} : {krewes[key][valindex]}')
 
-for i in range(100):
-    print(choose())
+choose()
