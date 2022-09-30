@@ -1,7 +1,7 @@
 import random
 '''
-Julia Lee
-SoftDev
+RANDO: Julia Lee, Fang Chen
+SoftDev, Pd 2
 K05 -- bitstream
 2022-09-29
 time spent:
