@@ -1,3 +1,4 @@
+import random
 '''
 Julia Lee
 SoftDev
@@ -12,7 +13,9 @@ dictionary[key] = value
 QCC:
 I remember being told to close files after reading them, but I don't really remember or understand why that's important.
 Is there a way to split along various characters at once? For example, to split on the condition of there being $$$ or @@@?
-What exactly is the function of "open". 
+What exactly is the function of "open".
+OPS SUMMARY:
+
 '''
 krewes = {}
 file = open("krewes.txt", "r")
@@ -24,4 +27,7 @@ for person in alls:
         krewes[int(tempList[0])] = [tempList[1:]]
     else:
         krewes[int(tempList[0])].append(tempList[1:])
-print(krewes)
+        
+key = random.choice(list(krewes.keys()))
+value = random.choice(krewes[key])
+print(f'{key} : {value[0]} : {value[1]}')
