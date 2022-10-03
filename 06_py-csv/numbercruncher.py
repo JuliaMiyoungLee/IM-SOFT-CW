@@ -17,6 +17,7 @@ After setting a variable in the file to a value, calling a defined function (whi
 
 Utilizing strip() helps to get rid of unwanted newlines
 There is a built in csv library
+round(number, number of decimal places to round to)
  QCC:
     How can we update the value of an initialized variable by calling a function?
     Maybe we would have to set x = function call.
@@ -33,13 +34,15 @@ listOfJobs = file.split("\n") #List of each "occupation",%
 counter = 0.0 #Keeps track of rollover percentages
 
 for job in listOfJobs:
-    temp = job[::-1].split(",",1)
-    counter = counter + float(temp[0][::-1])
-    print(counter)
-#     counter = counter + float(temp[-1])
-#     jobstr = ""
-#     for i in range(0, len(temp) - 1):
-#         jobstr += temp[i]
-#     jobs[counter] = jobstr
-#
-# print(jobs)
+    temp = job[::-1].split(",",1) #Reverses the string and then splits the string on the first comma
+    counter = round(counter + float(temp[0][::-1]), 1)
+    jobs[counter] = temp[1][::-1].strip('"')
+
+def getJob(data): #Takes in a dictionary and returns a random job from it
+    rand = round(random.uniform(0, 99.8), .1)
+    print("random number: " + str(rand) + "\n")
+    for key in list(jobs.keys()):
+        if key >= rand:
+            return jobs[key]
+
+print(jobs)
