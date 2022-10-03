@@ -39,10 +39,23 @@ for job in listOfJobs:
     jobs[counter] = temp[1][::-1].strip('"')
 
 def getJob(data): #Takes in a dictionary and returns a random job from it
-    rand = round(random.uniform(0, 99.8), .1)
-    print("random number: " + str(rand) + "\n")
+    rand = round(random.uniform(0, 99.8), 1)
     for key in list(jobs.keys()):
         if key >= rand:
             return jobs[key]
 
-print(jobs)
+#Testing
+jobTest = {}
+numOfTests = 10000
+
+for job in jobs.values(): #Creates a dictionary of jobs
+    jobTest[job] = 0
+
+for trial in range(numOfTests): #Keeps track of how many times each job has been selected
+    jobTest[getJob(jobs)] += 1
+
+for job in list(jobTest.keys()): #Finds the percentages at which each job was selected
+    jobTest[job] = round(float(jobTest[job]*100 / numOfTests), 1)
+
+print(listOfJobs)
+print(jobTest)
