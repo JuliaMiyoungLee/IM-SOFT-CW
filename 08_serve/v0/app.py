@@ -1,0 +1,16 @@
+# Goda (Aaron Gershkovich,Julia Lee, Weichen Liu)
+#SoftDev
+#K08
+#2022-10-04
+#Time Spent:
+
+from flask import Flask
+app = Flask(__name__) # ...
+
+@app.route("/") # ...
+def hello_world():
+    print(__name__) # ...
+    return "No hablo queso!"  # ...
+
+app.run()  # ...
+                
