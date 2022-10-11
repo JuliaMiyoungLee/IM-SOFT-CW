@@ -1,3 +1,11 @@
+'''
+Goda (Aaron Gershkovich,Julia Lee, Weichen Liu)
+SoftDev
+K08
+2022-10-04
+Time Spent: 1 hr
+'''
+
 import random
 from flask import Flask
 total = 0.0
@@ -5,7 +13,7 @@ def readfile(f):
     with open(f,"r") as a:
         return a.read()
 
-def split_by_last_comma(occupation):
+def split_by_last_comma(occupation): 
     comma_index = occupation.rindex(",")
     splits = [occupation[:comma_index],float(occupation[comma_index+1:])]
     if splits[0][0] == "\"":
