@@ -14,9 +14,16 @@
 ### Important Features:
 - Top left mouse above a box icon / Ctrl + Shift + C: If you click on this, you can now highlight elements on the page with your mouse. Then, you will be directed to the html code that corresponds with the code that you selected.
 - Device icon / ctrl + shift + M: You can change the display dimensions and the device type (desktop or mobile) which your display is created for.
+ - In fact, you can choose to display the screen according to specific device models if you click on "Dimensions: Responsive" on the top right, above the display itself.
 
 #### Elements:
 This is where you will find the actual html code corresponding to what elements are being displayed on your screen. You will find that the code can be hidden and displayed according to their tags, which makes reading the code and finding specific elements much easier.
+
+#### Style:
+- All of the applied styling to your code can be found under the tab "Styles" found under your "Elements" tab and its contents.
+- You're able to directly edit this style and a cool feature is that if you hover your mouse above a line of style, you can check or uncheck that line, letting you easily compare different stylings.
+- The Style tab is dynamic, so it changes according to what you have selected in your Elements tab. 
+ - If you select the elements within <head> </head> in your elements tab, then you will only be shown style being applied to that element.
 
 #### Consol:
 One of the most helpful uses of the consol is that it gives feedback as you run the webpage.
