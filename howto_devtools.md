@@ -2,18 +2,18 @@
 ## Team QR Code Generators: Julia Lee, William V., Jeffery Zhou
 #### How to access:
 ##### [From the POV of a Windows User. Tested on Microsoft Edge and Chrome]
-F12
-Right click -> inspect
-Top right of browser three dots -> More tools -> Developer tools
-Ctrl + Shift + I
+- F12
+- Right click -> inspect
+- Top right of browser three dots -> More tools -> Developer tools
+- Ctrl + Shift + I
 
 #### Advantages:
-You can make temporary changes to the code to test out what your changes will look like on the website.
-You can access the source code as well as view the files used in serving the webpage in an organized manner.
+- You can make temporary changes to the code to test out what your changes will look like on the website.
+- You can access the source code as well as view the files used in serving the webpage in an organized manner.
 
 ### Features:
-Top left mouse above a box icon / Ctrl + Shift + C: If you click on this, you can now highlight elements on the page with your mouse. Then, you will be directed to the html code that corresponds with the code that you selected.
-Device icon / ctrl + shift + M: You can change the display dimensions and the device type which your display is created for.
+- Top left mouse above a box icon / Ctrl + Shift + C: If you click on this, you can now highlight elements on the page with your mouse. Then, you will be directed to the html code that corresponds with the code that you selected.
+- Device icon / ctrl + shift + M: You can change the display dimensions and the device type which your display is created for.
 
 #### Elements:
 This is where you will find the actual html code corresponding to what elements are being displayed on your screen. You will find that the code can be hidden and displayed according to their tags, which makes reading the code and finding specific elements much easier.
