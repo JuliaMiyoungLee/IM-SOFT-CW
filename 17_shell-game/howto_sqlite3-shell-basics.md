@@ -5,23 +5,23 @@
 sqlite3 [database name]
 - No database name will make a temp database.
 
-create table [name](colName type, colName type)
+create table [name](colName type, colName type)  
 insert into [name] values(val, val)
 
-select * from [name]
+select * from [name]  
 select * from [name] where [condition]
 
-.open [database]
+.open [database]  
 * You can put the database location to specify
-.save [database]
+.save [database]  
 
-.mode [mode]
+.mode [mode]  
 - Changes the way the table is displayed
-.separator [separator]
+.separator [separator]  
 
-.output [file]
+.output [file]  
 - Changes output for whole session
-.once [file]
+.once [file]  
 - Outputs to this file only for this command
 
 - You should change the mode before outputting to a file.
