@@ -17,13 +17,20 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 # < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
 
+def createTable(csvFile):
+    with open(csvFile, newline='\n') as csvfile:
+        reader = csv.DictReader(csvfile)
+        name = csvFile[:-4]
+        c.execute(".mode csv")
+        command = "create table " + name + "(" + reader.fieldnames[0] + " text, " + reader.fieldnames[1] + " int, " + reader.fieldnames[2] + " int);"        
+        c.execute(command)    # run SQL statement
+        for row in reader:
+            command = "insert into " + name + " values('" + row[reader.fieldnames[0]] + "', " + row[reader.fieldnames[1]] + ", " + row[reader.fieldnames[2]] + ");"
+            c.execute(command)
 
-command = "create table tb1(c1 int, c2 text)"          # test SQL stmt in sqlite3 shell, save as string
-c.execute(command)    # run SQL statement
-
+createTable('students.csv')
 #==========================================================
 
 db.commit() #save changes
 db.close()  #close database
-
 
