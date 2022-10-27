@@ -17,20 +17,20 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 # < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
 
-# c.execute('.mode csv')
+c.execute(".mode csv")
 
-def createTable(csvFile):
-    with open(csvFile, newline='\n') as csvfile:
-        reader = csv.DictReader(csvfile)
-        name = csvFile[:-4]
-        command = "create table " + name + "(" + reader.fieldnames[0] + " text, " + reader.fieldnames[1] + " int, " + reader.fieldnames[2] + " int);"
-        c.execute(command)    # run SQL statement
-        for row in reader:
-            command = "insert into " + name + " values('" + row[reader.fieldnames[0]] + "', " + row[reader.fieldnames[1]] + ", " + row[reader.fieldnames[2]] + ");"
-            c.execute(command)
-
-createTable('students.csv')
-createTable('courses.csv')
+# def createTable(csvFile):
+#     with open(csvFile, newline='\n') as csvfile:
+#         reader = csv.DictReader(csvfile)
+#         name = csvFile[:-4]
+#         command = "create table " + name + "(" + reader.fieldnames[0] + " text, " + reader.fieldnames[1] + " int, " + reader.fieldnames[2] + " int);"
+#         c.execute(command)    # run SQL statement
+#         for row in reader:
+#             command = "insert into " + name + " values('" + row[reader.fieldnames[0]] + "', " + row[reader.fieldnames[1]] + ", " + row[reader.fieldnames[2]] + ");"
+#             c.execute(command)
+#
+# createTable('students.csv')
+# createTable('courses.csv')
 #==========================================================
 
 db.commit() #save changes
