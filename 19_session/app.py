@@ -1,3 +1,11 @@
+"""QR CODE GENERATORS: JEFFREY ZOU, JULIA LEE, WILLIAM
+SoftDEV
+K19 Session
+11-07-2022
+time spent: 1 hr - ish?
+"""
+
+
 from flask import Flask
 from flask import session
 from flask import render_template
@@ -5,19 +13,13 @@ from flask import request
 
 app = Flask(__name__)
 # Set the secret key to some random bytes. Keep this really secret!
-app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+app.secret_key = 'sje938__`+sdf??/sdie'
 
 @app.route('/')
 def index():
     if 'username' in session and 'password' in session:
         return render_template('login.html')
-    return render_template('login.html', problem = 'bad')
-    # elif 'username' not in session and 'password' not in session:
-    #     return render_template('login.html', problem = 'juju')
-    # elif 'username' not in session:
-    #     return render_template('login.html', problem = 'bad username')
-    # elif 'password' not in session:
-    #     return render_template('login.html', problem = 'bad password')
+    return render_template('login.html')
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -25,7 +27,14 @@ def login():
     if request.method == 'POST':
         session['username'] = request.form['username']
         session['password'] = request.form['password']
-        return render_template('response.html', username = 'username')
+        if request.form['username'] == 'QRGENz' and request.form['password'] == 'Coolests':
+            return render_template('response.html', username = 'QRGENz')
+        elif request.form['username'] != 'QRGENz' and request.form['password'] != 'Coolests':
+            return render_template('login.html', problem = 'bad juju')
+        elif request.form['username'] != 'QRGENz':
+            return render_template('login.html', problem = 'bad user')
+        elif request.form['password'] != 'Coolests':
+            return render_template('login.html', problem = 'bad pass')
     # return render_template('login.html')
     return render_template('login.html')
 
@@ -33,7 +42,7 @@ def login():
 def logout():
     # remove the username from the session if it's there
     session.pop('username', None)
-    return 'byebye'
+    return render_template('login.html', problem = 'You have been logged out')
 
 if __name__ == "__main__":
     app.debug = True
