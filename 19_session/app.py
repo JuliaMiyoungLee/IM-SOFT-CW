@@ -9,22 +9,25 @@ app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
 @app.route('/')
 def index():
-    if 'username' in session:
-        return f'Logged in as {session["username"]}'
-        return render_template('response.html')
-    return render_template('login.html')
+    if 'username' in session and 'password' in session:
+        return render_template('login.html')
+    return render_template('login.html', problem = 'bad')
+    # elif 'username' not in session and 'password' not in session:
+    #     return render_template('login.html', problem = 'juju')
+    # elif 'username' not in session:
+    #     return render_template('login.html', problem = 'bad username')
+    # elif 'password' not in session:
+    #     return render_template('login.html', problem = 'bad password')
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         session['username'] = request.form['username']
-        return 'foo'
-    return '''
-        <form method="post">
-            <p><input type=text name=username>
-            <p><input type=submit value=Login>
-        </form>
-    '''
+        session['password'] = request.form['password']
+        return render_template('response.html', username = 'username')
+    # return render_template('login.html')
+    return render_template('login.html')
 
 @app.route('/logout')
 def logout():
