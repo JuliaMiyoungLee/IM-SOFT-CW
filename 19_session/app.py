@@ -18,7 +18,7 @@ app.secret_key = 'sje938__`+sdf??/sdie'
 @app.route('/')
 def index():
     if 'username' in session and 'password' in session:
-        return render_template('login.html')
+        return render_template('response.html', username = session['username'])
     return render_template('login.html')
 
 
