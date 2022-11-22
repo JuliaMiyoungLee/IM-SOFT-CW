@@ -1,0 +1,4 @@
+DISCO:
+- python requests: Can request data from an html file.
+  - .json() will give you the data in the form of a dictionary
+- I had forgotten, but images are displayed using <img src=[url]>
