@@ -10,3 +10,4 @@ if 'username' in session
 ```
 checks to see if there is a value for the 'username' key in the Session object.
 - It's helpful to think of a session object as a dictionary object.
+- If you make form value input type = "password" it automatically displays dots instead of text.
