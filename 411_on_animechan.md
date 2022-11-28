@@ -1,16 +1,16 @@
 Collected Knowledge & Wisdom on
 # Animechan
-Provides Anime Quotes
+Provides Anime Quotes  
 https://github.com/rocktimsaikia/anime-chan
 ---
 ## Provides:
 This API provides the following get the following:
   - A random quote (https://animechan.vercel.app/api/random)
-  - A random quote by title (https://animechan.vercel.app/api/random/anime?title=[insert title])
-  - A random quote by character (https://animechan.vercel.app/api/random/character?name=[insert name])
+  - A random quote by title (https://animechan.vercel.app/api/random/anime?title= [insert title])
+  - A random quote by character (https://animechan.vercel.app/api/random/character?name= [insert name])
   - 10 random quotes (https://animechan.vercel.app/api/quotes)
-  - 10 quotes by title (https://animechan.vercel.app/api/quotes/anime?title=[insert title])
-  - 10 quotes by character (https://animechan.vercel.app/api/quotes/character?name=[insert name])
+  - 10 quotes by title (https://animechan.vercel.app/api/quotes/anime?title= [insert title])
+  - 10 quotes by character (https://animechan.vercel.app/api/quotes/character?name= [insert name])
 - Pagination (only for query endpoints)
 
 ### Pain factor: 2
