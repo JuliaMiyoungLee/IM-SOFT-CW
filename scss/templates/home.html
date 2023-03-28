@@ -3,9 +3,52 @@
 <link rel="stylesheet" href="/static/css/homestyle.css">
 <body>
 
-<h1>Hello World</h1>
+<h1>Whoa CSS?!</h1>
 
-<p>This is a paragraph.</p>
+<p>SASS is like CSS but you're actually coding!</p>
+
+<div class="lesson">
+    <div class = "variables">
+        <h2>Variables</h2>
+
+        <p>$[name]:[value]</p>
+
+        <div class="scss">
+            <div class="variable">$bgcolor</div>:<div class="color">lightblue </div>;<br>
+            <div class="variable"> $textcolor</div>:<div class="color">darkblue </div>;<br>
+            <div class="variable">$fontsize</div>:<div class="font-size">18px </div>;<br>
+
+
+            <div class="class">body </div> { <br>
+            <div class="variable">background-color: $bgcolor; <br>
+            color: $textcolor; <br>
+            font-size: $fontsize; </div> <br>
+            } <br>
+
+        </div>
+
+        <div class="css">
+            <div class="class">body </div>{ <br>
+                <div class="variable">background-color</div>: <div class="color">lightblue</div>; <br>
+                <div class="variable">color</div>: <div class="color">darkblue </div>; <br>
+                <div class="variable">font-size</div>: <div class="font-size">18px</div>; <br>
+              }
+              
+        </div>
+    </div>
+
+    <div class = "partials">
+        <h2>Partials</h2>
+
+        <p>
+            <ul>
+                <li>Separate files with snippets of CSS that can be used in other CSS files.</li>
+                <li>Denote using an underscore in the file name</li>
+                <li>Hi</li>
+            </ul>
+        </p>
+    </div>
+</div>
 
 </body>
 </html>      

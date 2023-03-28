@@ -2,6 +2,98 @@ body {
   background-color: lightblue;
   color: darkblue;
   font-size: 18px;
+  text-align: center;
+}
+
+body h1 {
+  font-size: 18px;
+}
+body .lesson {
+  color: black;
+  font-size: 14px;
+}
+body .lesson h2 {
+  font-size: 24px;
+}
+body .lesson p {
+  font-size: 18px;
+}
+body .lesson ul {
+  font-size: 14px;
+  display: inline-block;
+  text-align: left;
+}
+body .lesson .variables {
+  background-color: rgb(172, 217, 172);
+  box-sizing: border-box;
+  float: left;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+body .lesson .partials {
+  background-color: #89c989;
+  box-sizing: border-box;
+  float: left;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+body .lesson .scss {
+  background-color: black;
+  box-sizing: border-box;
+  float: left;
+  width: 48%;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+body .lesson .scss .variable {
+  color: rgb(40, 175, 221);
+  display: inline;
+}
+body .lesson .scss .color {
+  color: orange;
+  display: inline;
+}
+body .lesson .scss .font-size {
+  color: rgb(148, 232, 148);
+  display: inline;
+}
+body .lesson .scss .class {
+  color: rgb(218, 223, 94);
+  display: inline;
+}
+body .lesson .css {
+  background-color: black;
+  box-sizing: border-box;
+  float: right;
+  width: 48%;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+body .lesson .css .variable {
+  color: rgb(40, 175, 221);
+  display: inline;
+}
+body .lesson .css .color {
+  color: orange;
+  display: inline;
+}
+body .lesson .css .font-size {
+  color: rgb(148, 232, 148);
+  display: inline;
+}
+body .lesson .css .class {
+  color: rgb(218, 223, 94);
+  display: inline;
 }
 
 /*# sourceMappingURL=homestyle.css.map */

@@ -1,9 +1,70 @@
-$bgcolor: lightblue;
-$textcolor: darkblue;
-$fontsize: 18px;
+@use "bodyPartial";
+@use "sass:math";
+$fontsize: 14px;
+$boxcolor: rgb(172, 217, 172);
+
+@mixin box($color, $align: left, $width: 100%, $padding: 10px){
+  background-color: $color;
+  box-sizing: border-box;
+  float: $align;
+  width: $width;
+  padding: $padding;
+  text-align: center;
+}
+
+@mixin code($align: left){
+  @include box($color: black, $width: 48%, $padding: 20px, $align: $align);
+  color: white;
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  .variable{
+    color: rgb(40, 175, 221);
+    display: inline;
+  }
+  .color{
+    color: orange;
+    display: inline;
+  }
+  .font-size{
+    color: rgb(148, 232, 148);
+    display: inline;
+  }
+  .class{
+    color: rgb(218, 223, 94);
+    display: inline;
+  }
+}
 
 body {
-  background-color: $bgcolor;
-  color: $textcolor;
-  font-size: $fontsize;
-}               
+  h1 {
+    font-size: bodyPartial.$fontsize;
+  }
+  .lesson{
+    color:black;
+    font-size: $fontsize;
+    h2{
+      font-size: $fontsize+10;
+    }
+    p{
+      font-size: $fontsize+4;
+    }
+    ul{
+      font-size: $fontsize;
+      display: inline-block;
+      text-align: left;
+    }
+    .variables{
+      @include box($color: $boxcolor);
+    }
+    .partials{
+      @include box($color: darken($boxcolor, 10%));
+    }
+    .scss {
+      @include code();
+    }
+    .css {
+      @include code($align: right);
+    }
+  }
+}
