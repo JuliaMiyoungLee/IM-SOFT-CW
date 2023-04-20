@@ -1,0 +1,4 @@
+- Functions don't need names
+- "click" is the keyword, not "onclick"
+- the second parameter of addEventListener has to be a function, but we can't just put a function call because it would evaluate to the return value of the function.
+- The arrow function assigns an entire function as the "return value" to the function that comes before the arrow.
