@@ -23,4 +23,4 @@ var draw = () => {
 
 c.addEventListener("click",draw);
 var bToggler = document.getElementById("buttonToggle");
-bToggler.toggleMode;
+bToggler.addEventListener('click', ()=>{toggleMode()});
