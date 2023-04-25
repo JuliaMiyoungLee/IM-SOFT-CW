@@ -31,12 +31,7 @@ var drawCircle = (e) => {
     ctx.beginPath();
     ctx.arc(mouseX, mouseY, 30, 0, Math.PI * 2, true);
     ctx.fill();
-    // ctx.beginPath();
-    // ctx.strokeStyle = "black";
-    // ctx.lineWidth = 1;
-    // ctx.moveTo(mouseX, mouseY);
-    // ctx.arcTo(mouseX, mouseY, 30, 40, 30);
-    // ctx.stroke();
+    ctx.stroke();
 }
 var draw = (e) => {
     if (mode == "rect") {
@@ -45,7 +40,6 @@ var draw = (e) => {
     else {
         drawCircle(e);
     }
-    console.log("draw");
 }
 
 var wipeCanvas = () => {
