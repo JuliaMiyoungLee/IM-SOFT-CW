@@ -9,9 +9,11 @@ var toggleMode = (e) => {
     console.log("toggling...");
     if (mode == "rect") {
         mode = "circle";
+        buttonToggle.innerHTML = "circle";
     }
     else {
         mode = "rect";
+        buttonToggle.innerHTML = "rectangle";
     }
 }
 
