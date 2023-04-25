@@ -49,11 +49,11 @@ var draw = (e) => {
 }
 
 var wipeCanvas = () => {
-    clearRect(0, 0, ctx.height, ctx.width);
+    ctx.clearRect(0, 0, c.clientWidth, c.clientHeight);
 }
 
 c.addEventListener("click",draw);
 var bToggler = document.getElementById("buttonToggle");
-bToggler.addEventListener('click', ()=>{toggleMode()});
+bToggler.addEventListener('click', toggleMode);
 var clearB = document.getElementById("buttonClear");
-clearB.addEventListener('click', ()=>{wipeCanvas()});
+clearB.addEventListener('click', wipeCanvas);
