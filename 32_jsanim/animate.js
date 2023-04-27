@@ -9,11 +9,6 @@ ctx.fillStyle = "blue";
 
 var requestID;
 
-var clear = (e) => {
-    e.preventDefault();
-    ctx.clearRect(0, 0, 500, 500);
-};
-
 var radius = 0;
 var growing = true;
 
@@ -37,6 +32,11 @@ var drawDot = () =>{
     ctx.stroke();
 };
 
+var clear = function(e) {
+    // e.preventDefault();
+    ctx.clearRect(0, 0, 500, 500);
+};
+
 var dvdLogoSetup = function() {
     window.cancelAnimationFrame(requestID);
 
@@ -55,11 +55,10 @@ var dvdLogoSetup = function() {
     var dvdLogo = function() {
         ctx.clearRect(0, 0, c.width, c.height);
         ctx.drawImage(logo, rectX, rectY, rectWidth, rectHeight);
-        console.log("" + rectX + ", " + rectY);
-        if (Math.abs((c.width - rectWidth) - rectX) < 10 || Math.abs(rectX) < 5) {
+        if (((c.width - rectWidth) - rectX) < 5 || rectX < 5) {
             xVel = -1 * xVel;
         } 
-        if (Math.abs((c.height - rectHeight) - rectY) < 10 || Math.abs(rectY) < 5) {
+        if (((c.height - rectHeight) - rectY) < 5 || rectY < 5) {
             yVel = -1 * yVel;
         }
         rectX = rectX + xVel;
