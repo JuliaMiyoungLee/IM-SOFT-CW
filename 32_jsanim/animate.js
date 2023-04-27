@@ -1,7 +1,7 @@
 var c = document.getElementById("playground");
 var dotButton = document.getElementById("buttonCircle");
 var stopButton = document.getElementById("buttonStop");
-var stopButton = document.getElementById("dvd");
+var dvdButton = document.getElementById("dvd");
 
 var ctx = c.getContext("2d");
 
@@ -40,14 +40,14 @@ var drawDot = () =>{
 var dvdLogoSetup = function() {
     window.cancelAnimationFrame(requestID);
 
-    var rectWidth = 12;
-    var rectHeight = 8;
+    var rectWidth = 60;
+    var rectHeight = 40;
 
     var rectX = Math.floor(Math.random() * (500-rectWidth));
     var rectY = Math.floor(Math.random() * (500-rectHeight));
 
-    var xVel = 5;
-    var yVel = 5;
+    var xVel = 2;
+    var yVel = 2;
 
     var logo = new Image();
     logo.src = "logo_dvd.jpg";
@@ -55,21 +55,19 @@ var dvdLogoSetup = function() {
     var dvdLogo = function() {
         ctx.clearRect(0, 0, c.width, c.height);
         ctx.drawImage(logo, rectX, rectY, rectWidth, rectHeight);
-        if () {
-            xVel = ;
+        console.log("" + rectX + ", " + rectY);
+        if (Math.abs((c.width - rectWidth) - rectX) < 10 || Math.abs(rectX) < 5) {
+            xVel = -1 * xVel;
         } 
-        if () {
-            yVel = ;
+        if (Math.abs((c.height - rectHeight) - rectY) < 10 || Math.abs(rectY) < 5) {
+            yVel = -1 * yVel;
         }
         rectX = rectX + xVel;
         rectY = rectY + yVel;
-        requestId = window.requestAnimationFrame(dvdLogo);
+        requestID = window.requestAnimationFrame(dvdLogo);
     };
     dvdLogo();
 }
-
-
-
 
 var stopIt = () => {
     console.log("stopIt invoked...");
@@ -79,4 +77,5 @@ var stopIt = () => {
 
 dotButton.addEventListener("click", drawDot);
 stopButton.addEventListener("click", stopIt);
+dvdButton.addEventListener("click", dvdLogoSetup);
 
