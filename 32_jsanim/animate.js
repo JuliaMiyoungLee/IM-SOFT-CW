@@ -14,7 +14,6 @@ var growing = true;
 
 var drawDot = () =>{
     window.cancelAnimationFrame(requestID);
-    requestID = window.requestAnimationFrame(drawDot);
     clear();
     if (radius == 250) {
         growing = !growing;
@@ -30,6 +29,7 @@ var drawDot = () =>{
     ctx.arc(250, 250, radius, 0, Math.PI * 2, true);
     ctx.fill();
     ctx.stroke();
+    requestID = window.requestAnimationFrame(drawDot);
 };
 
 var clear = function(e) {
